@@ -7,7 +7,7 @@ from pyspark.sql.types import StructType
 spark = SparkSession.builder.appName("Load JSON Data with Schema").getOrCreate()
 
 # Load schema.json file
-schema_file_path = "dbfs:/FileStore/pinal/results_schema_1.json"
+schema_file_path = "dbfs:/FileStore/pinal/results_schema.json"
 
 # Read schema.json from DBFS
 schema_json_df = spark.read.text(schema_file_path)
